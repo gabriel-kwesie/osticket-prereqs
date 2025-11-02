@@ -27,8 +27,8 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Within Azure, create a Resource Group and a virtual machine. Set the Region. Choose the Image Windows 10 Pro (Platform the machine will run on)
-Choose an appropriate machine size: 2 vCPUs, 8 GiB memory. Set User name and Password > Check the licensing agreement box >Then review and create.
+Within Azure, select Create a virtual machine > Set the Region > Choose the Image Windows 10 Pro (Platform the machine will run on) >
+Choose an appropriate machine size: 2 vCPUs, 8 GiB memory > Set User name and Password > Check the licensing agreement box >Then review and create.
 </p>
 <br />
 
