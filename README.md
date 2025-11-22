@@ -183,7 +183,7 @@ Rename: ost-config.php
   
 Open file explorer
 Order of folders to open C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php
-Then change the ost-sampleconfig.php to ost-config.php
+rename the ost-sampleconfig.php to ost-config.php
 </p>
 <br />
 
