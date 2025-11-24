@@ -20,6 +20,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 - Microsoft Azure Subscription
 - OsTicket Download Files
+- 
 
 <h2>Installation Steps</h2>
 
@@ -30,7 +31,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 Creating an Azure Virtual Machine
 
 Within Azure, select Create a virtual machine > Set the Region > Choose the Image Windows 10 Pro (Platform the machine will run on) >
-Choose an appropriate machine size: 2 vCPUs, 8 GiB memory > Set User name and Password > Check the licensing agreement box >Then review and create.
+Choose an appropriate machine size: (2 vCPUs, 8 GiB memory for tutorial) > Set Username and Password > Check the licensing agreement box > Then review and create.
 </p>
 <br />
 
@@ -40,7 +41,7 @@ Choose an appropriate machine size: 2 vCPUs, 8 GiB memory > Set User name and Pa
 <p>
 Logging into and downloading osTicket 
   
-Copy the Virtual machine’s Public IP address > open Remote Desktop > paste the IP > and log in with the previously created username and password
+Copy the Virtual machine’s Public IP address > open Remote Desktop > paste the IP > and log in with the previously created VM username and password
 </p>
 <br />
 
@@ -48,8 +49,8 @@ Copy the Virtual machine’s Public IP address > open Remote Desktop > paste the
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Within the Virtual machine, open a web browser and download the osTicket installation zip file
-Go to the file location, drag the folder to the desktop, and extract 
+Within the Virtual machine, open a web browser and download the osTicket installation zip file > 
+Go to the file location > drag the folder to the desktop > and extract 
 </p>
 <br />
 
@@ -68,7 +69,7 @@ Go to Programs > select “Turn Windows Features On or Off” > check the box �
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Select the plus icon next to (IIS) > “World Wide Web Services” > “Application Development Features, check the box “CGI”, and then press OK 
+Select the plus icon next to (IIS) > “World Wide Web Services” > “Application Development Features, check the box “CGI”, > then press OK 
 </p>
 <br />
 
@@ -107,7 +108,7 @@ Within File Explorer, open the C Drive (Windows (C:), and create a new folder na
 </p>
 <p>
 Open the previously unzipped osTicket folder and extract the PHP zip
-(php-7.3.8-nts-Win32-VC15-x86.zip) into the C drive folder you just created
+(php-7.3.8-nts-Win32-VC15-x86.zip) into the PHP folder in the C drive you just created
 </p>
 <br />
 
@@ -128,8 +129,8 @@ Open the VC redistributable (VC_redist.x86.exe.) and follow the onscreen instruc
 Installing My Sequel
   
 Open the MySQL file (mysql-5.5.62-win32) > typical setup, and install 
-Launch the configuration wizard and select the standard configuration
-Create a password (Lab example: Root), then continue the installation 
+Launch the configuration wizard > select the standard configuration >
+Create a password > then continue the installation 
 </p>
 <br />
 
@@ -137,7 +138,7 @@ Create a password (Lab example: Root), then continue the installation
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Open IIS as an admin > Open the PHP manager > Select Register new PHP Version > then press the three dots to browse for php-cgi, select it, then press ok
+Open IIS (Internet Information Services) as an admin > Open the PHP manager > Select Register new PHP Version > then press the three dots to browse for php-cgi, select it, then press ok
 Click osticket-vm on the left side, and restart IIS by stopping and starting it
 </p>
 <br />
@@ -157,7 +158,7 @@ Go back to the osTicket installation files folder and find the zipfile named (os
 </p>
 <p>
 Find the new folder that is named (osTicket-v1.15.8) (NOT THE ZIP) and open it
-Open the C Drive > inethub > finally wwwroot, and copy the upload folder into that folder and rename the folder to (osTicket) the same way
+Open the C Drive > inethub > finally wwwroot > copy the upload folder from the (osTicket-v1.15.8) into wwwroot > rename the folder to (osTicket) the same way
 Restart IIS by stopping and restarting it
 </p>
 <br />
@@ -166,9 +167,9 @@ Restart IIS by stopping and restarting it
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Go to sites > Default Website > then osTicket > and click Browse, which will open up osTicket within your browser
-Go to sites > Default Website > osTicket, and open the PHP manager
-Find Enable or disable extensions
+Go to sites > Default Website > then osTicket > and click Browse > this will open up osTicket within your browser
+To enable extensions, in IIS, go to sites > Default Website > osTicket > open the PHP manager
+Find "Enable or disable extensions."
 Enable: php_imap.dll
 Enable: php_intl.dll
 Enable: php_opcache.dll
@@ -181,8 +182,7 @@ Enable: php_opcache.dll
 <p>
 Rename: ost-config.php
   
-Open file explorer
-Order of folders to open C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php
+Open file explorer > open C Drive > inetpub > wwwroot > osTicket > include > ost-sampleconfig.php
 rename the ost-sampleconfig.php to ost-config.php
 </p>
 <br />
@@ -193,7 +193,7 @@ rename the ost-sampleconfig.php to ost-config.php
 <p>
 Giving access to osTicket 
 Properties > security > advanced > disable inheritance
-Add > principle > everyone (For the lab) > Full control > apply > ok
+Then add > principle > everyone (For the tutorial) > Full control > apply > ok
 </p>
 <br />
 
@@ -205,12 +205,17 @@ In osTicket
 Fill in information for system settings and admin user
 
 Open the desktop and find the osTicket installation folder
-Open Heidi SQL and follow the on-screen instructions
-Select new, set the username (username should already be present due to a previous step)(root and root), password, and open
-Right-click where it says unnamed > create new > select database, and name it “osTicket”
+Find and Open Heidi SQL and follow the on-screen instructions
+Select new, set the username (username should already be present due to a previous step)(MySQL Login info), and password > open
+Right-click where it says unnamed > create new > select database > name it “osTicket.”
 
-Go back into your browser on the osTicket setup page 
-Name MySGL Database “osTicket”
-Set username and password as root and root (Lab used login info)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Go back into your browser on the osTicket setup page > Name MySGL Database “osTicket.” > Log in using the MYSQL login (Lab used login info) > then install
 </p>
 <br />
