@@ -217,6 +217,6 @@ Right-click where it says unnamed > create new > select database > name it “os
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Go back into your browser on the osTicket setup page > Name MySGL Database “osTicket.” > Log in using the MYSQL login (Lab used login info) > then install
+Go back into your browser on the osTicket setup page > Name MySGL Database “osTicket.” > Log in using the MYSQL login info from before > then install
 </p>
 <br />
