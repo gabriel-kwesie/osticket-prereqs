@@ -193,6 +193,7 @@ rename the ost-sampleconfig.php to ost-config.php
 <p>
 Giving access to osTicket 
 Properties > security > advanced > disable inheritance
+
 Then add > principle > everyone (For the tutorial) > Full control > apply > ok
 </p>
 <br />
