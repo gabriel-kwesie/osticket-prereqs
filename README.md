@@ -14,7 +14,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>Operating Systems Used </h2>
 
-- Windows 10</b> (21H2)
+- Windows 11`</b> (21H2)
 
 <h2>List of Prerequisites</h2>
 
@@ -30,7 +30,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <p>
 Creating an Azure Virtual Machine
 
-Within Azure, select Create a virtual machine > Set the Region > Choose the Image Windows 10 Pro (Platform the machine will run on) >
+Within Azure, select Create a virtual machine > Set the Region > Choose the Image Windows 11 Pro (Platform the machine will run on) >
 Choose an appropriate machine size: (2 vCPUs, 8 GiB memory for tutorial) > Set Username and Password > Check the licensing agreement box > Then review and create.
 </p>
 <br />
