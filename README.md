@@ -41,7 +41,7 @@ Choose an appropriate machine size: (2 vCPUs, 8 GiB memory for tutorial) > Set U
 <p>
 Logging into and downloading osTicket 
   
-Copy the Virtual machine’s Public IP address > open Remote Desktop > paste the IP > and log in with the previously created VM username and password
+Go to the virtual machine tab in Azure > Copy the Virtual machine’s Public IP address > open Remote Desktop > paste the IP > and log in with the previously created VM username and password
 </p>
 <br />
 
@@ -50,7 +50,7 @@ Copy the Virtual machine’s Public IP address > open Remote Desktop > paste the
 </p>
 <p>
 Within the Virtual machine, open a web browser and download the osTicket installation zip file > 
-Go to the file location > drag the folder to the desktop > and extract 
+Go to the file location > drag the folder to the desktop > and extract all onto the desktop 
 </p>
 <br />
 
@@ -118,7 +118,7 @@ Open the previously unzipped osTicket folder and extract the PHP zip
 <p>
 Installing the VC Redistributable
   
-Open the VC redistributable (VC_redist.x86.exe.) and follow the onscreen instructions
+Within the unzipped osTicket folder, open the VC redistributable (VC_redist.x86.) and follow the onscreen instructions
 </p>
 <br />
 
@@ -128,7 +128,7 @@ Open the VC redistributable (VC_redist.x86.exe.) and follow the onscreen instruc
 <p>
 Installing My Sequel
   
-Open the MySQL file (mysql-5.5.62-win32) > typical setup, and install 
+Within the unzipped osTicket folder, open the MySQL file (mysql-5.5.62-win32) > typical setup, and install 
 Launch the configuration wizard > select the standard configuration >
 Create a password > then continue the installation 
 </p>
@@ -138,7 +138,7 @@ Create a password > then continue the installation
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Open IIS (Internet Information Services) as an admin > Open the PHP manager > Select Register new PHP Version > then press the three dots to browse for php-cgi, select it, then press ok
+In the Windows Start menu, open IIS (Internet Information Services) as an admin > Open the PHP manager > Select Register new PHP Version > then press the three dots to browse for php-cgi in the PHP folder, select it, then press ok
 Click osticket-vm on the left side, and restart IIS by stopping and starting it
 </p>
 <br />
@@ -158,7 +158,7 @@ Go back to the osTicket installation files folder and find the zipfile named (os
 </p>
 <p>
 Find the new folder that is named (osTicket-v1.15.8) (NOT THE ZIP) and open it
-Open the C Drive > inethub > finally wwwroot > copy the upload folder from the (osTicket-v1.15.8) into wwwroot > rename the folder to (osTicket) the same way
+In another tab, open the C Drive > inethub > finally wwwroot > copy the upload folder from the (osTicket-v1.15.8) into wwwroot > rename the folder to (osTicket) the same way
 Restart IIS by stopping and restarting it
 </p>
 <br />
@@ -167,7 +167,7 @@ Restart IIS by stopping and restarting it
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Go to sites > Default Website > then osTicket > and click Browse > this will open up osTicket within your browser
+Within IIS, go to sites > Default Website > then osTicket > and click Browse > this will open up osTicket within your browser
 To enable extensions, in IIS, go to sites > Default Website > osTicket > open the PHP manager
 Find "Enable or disable extensions."
 Enable: php_imap.dll
@@ -180,8 +180,6 @@ Enable: php_opcache.dll
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Rename: ost-config.php
-  
 Open file explorer > open C Drive > inetpub > wwwroot > osTicket > include > ost-sampleconfig.php
 rename the ost-sampleconfig.php to ost-config.php
 </p>
